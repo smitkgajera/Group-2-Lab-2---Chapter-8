@@ -17,7 +17,12 @@ $(function(){
       .append($('<tr><td><img src='+filenames[i]+'></td><td>'+titles[i]+
       '</td><td>'+quantities[i]+'</td><td>$'+prices[i]+
       '</td><td>$'+calculateTotal(quantities[i],prices[i])+'</td></tr>'));                    
-    }
+    }    
+    $("tbody").append($('<tr class="totals"><td colspan="4">Subtotal</td><td>$'+calculateFinalTotal().toFixed(2)+'</td></tr>'));
+    $("tbody").append($('<tr class="totals"><td colspan="4">Tax</td><td>$'+calculateTax().toFixed(2)+'</td></tr>'));
+    $("tbody").append($('<tr class="totals"><td colspan="4">Shipping</td><td>$'+calculateShipping().toFixed(2)+'</td></tr>'));
+    $("tbody").append($('<tr class="totals"><td colspan="4">Grand Total</td><td>$'+calculateGrandTotal().toFixed(2)+'</td></tr>'));
+})   // Trying different methods to add cart rows to get the same result
 
 
 
