@@ -35,4 +35,6 @@ function calculateGrandTotal(){
    grandTotal = total+tax+shipping;
    return grandTotal;
 }
+
+
         
