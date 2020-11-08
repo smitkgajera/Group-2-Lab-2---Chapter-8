@@ -5,6 +5,12 @@ var titles = ["Girl with a Pearl Earring", "Artist Holding a Thistle", "Portrait
 var quantities = [3, 1, 2];
 var prices = [80, 125, 75];
 
+var tableHead = $('<thead><tr><th colspan="2">Product</th><th>#</th><th>Price</th><th>Amount</th></tr></thead>'); 
+$(function(){
+    $(".table-fill").empty();
+    $(".table-fill").append(tableHead);
+    $(".table-fill").append($('<tbody></tbody>'));
+
 /* 
    NOTE: parallel arrays are not an ideal way to represent this data.
          We have done this to simplify this exercise.
