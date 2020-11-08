@@ -18,4 +18,21 @@ function calculateTotal(x, y){
 function calculateFinalTotal(){
     return total;
 }
+function calculateTax(){
+    tax =  total/10;
+    return tax;
+}
+function calculateShipping(){
+   if(total>1000){
+       return shipping;
+   }
+   else{
+       shipping = 40;
+       return shipping;
+   }
+}
+function calculateGrandTotal(){
+   grandTotal = total+tax+shipping;
+   return grandTotal;
+}
         
